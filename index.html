@@ -10,16 +10,26 @@
     <body onload="load()">
         <header>
             <h1>Time of day</h1>
+            <h2 id="clock_text"><i>clock_text</i></h2>
         </header>
-        <h2 id="clock_text"><i>clock_text</i></h2>
         <section>
-            <div id="time_msg">
+            <div class="small" id="time_msg">
+                a_message
             </div>
-            <div class="image-container">
+            <div class="large">
+                <img src="img/all.svg" alt="default">
+            </div>
+            <div class="small" id="time_wrong_msg">
+                Not quite? You can set another time:
+            </div>
+            <div class="small" id="correct_time">
+                <input type="time" name="wrong_lock" id="wrong_clock">
             </div>
         </section>
         <footer>
-            <p id="signature">&copy;  jsf-tree</p>            
+            <a href="https://github.com/jsf-tree">
+                <p id="signature">&copy;  jsf-tree</p>
+            </a>                     
         </footer>
         <script src="clock_page.js" type="text/javascript">console.log('hi')</script>
     </body>
