@@ -80,4 +80,14 @@ function load() {
     // listen_new_time(); listen to new time, if it is changed, get it and substitute to the update clock
 }
 
-setInterval(load, 1000);
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden")
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild("loader");
+    })
+})
+
+setInterval(load, 1000000);
