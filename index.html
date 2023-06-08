@@ -12,22 +12,22 @@
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
     </head>
-    <body onload="load()">
+    <body onload="update()">
         <header>
             <h1>Time of day</h1>
             <h2 id="clock_text"><i>clock_text</i></h2>
         </header>
         <div class="loader"></div>
         <section>
-            <div class="small" id="time_msg">
+            <div class="period-msg" id="time_msg">
             </div>
             <div class="large">
                 <img src="img/all.svg" alt="default">
             </div>
-            <div class="small" id="time_wrong_msg">
+            <div class="wrong-time" id="time_wrong_msg">
                 <p>Not quite? You can set another time:</p>
             </div>
-            <div class="small" id="correct_time">
+            <div class="wrong-time" id="correct_time">
                 <input type="time" name="wrong_lock" id="wrong_clock">
             </div>
         </section>
