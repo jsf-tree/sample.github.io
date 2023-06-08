@@ -59,9 +59,10 @@ div.period-msg {
 div.wrong-time {
     height: 10%;
     font-size: 2vh;
+    margin: 1%;
 }
 div.large {
-    height: 65%;
+    height: 60%;
     margin: 5%;
 }
 div.large img {
@@ -69,7 +70,8 @@ div.large img {
     width: auto; /* Maintain the aspect ratio of the image */
 }
 p#signature {
-    margin: 5pt auto;
+    margin-top: 4vh;
+    text-align: center;
     width: 80vw;
 }
 div.loader {
