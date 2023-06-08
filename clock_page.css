@@ -88,7 +88,7 @@ div.loader {
     width: 75px;
     height: 75px;
     border: 15px solid #cfcfcfdd;
-    border-top-color: #176917;
+    border-top-color: #1274b6;
     border-radius: 50%;
     animation: loading 1.5s ease infinite; /*each 1.5s, it will do animation*/
 }
@@ -97,6 +97,6 @@ div.loader {
     from{
         transform: rotate(0turn);
     } to {
-        transform: rotate(4turn);
+        transform: rotate(1turn);
     }
 }
