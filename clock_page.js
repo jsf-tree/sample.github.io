@@ -25,46 +25,31 @@ function updateClock() {
     
 }
 
-function updateSectionHeight() {
-    // Update container height according to its width
-    const container = document.querySelector('section');
-    const width = getComputedStyle(container).width;
-    const numericWidth = parseFloat(width.match(/\d+/)[0]);
-    container.style.height = `${numericWidth}px` //1.618
-}
-
-
 function updateTimeStyle () {
     function imgsrc(a_string) {
         return `<img src="img/${a_string}.png" alt="${a_string}">`
     }
 
     function setStyle(period_of_the_day) {
-        // pexels - Free and Open Image Database
-        const periodsOfTheDay = {
-            'morning': {
-                'msg': "It's morning", 
-                'img': imgsrc('morning')},
-            'lunch': {
-                'msg': "It's lunch time",
-                'img': imgsrc('lunch')},
-            'afternoon': {
-                'msg': "It's afternoon",
-                'img': imgsrc('afternoon')},
-            'sunset': {
-                'msg': "It's sunset",
-                'img': imgsrc('sunset')},
-            'night': {
-                'msg': "It's night",
-                'img': imgsrc('night')},
-        }
-        const text = document.querySelector("div#time_msg")
-        const img = document.querySelector("div.large")
         const body = document.querySelector('body')
-        text.innerHTML = periodsOfTheDay[period_of_the_day].msg
-        body.classList.add(period_of_the_day);
-        console.log(body.classList)
-        img.innerHTML = periodsOfTheDay[period_of_the_day].img
+
+        if (body.className != period_of_the_day) {
+            // pexels - Free and Open Image Database
+            const msgs = {
+                'morning': "It's morning", 
+                'lunch': "It's lunch time",
+                'afternoon': "It's afternoon",
+                'sunset': "It's sunset",
+                'night': "It's night",
+            }
+            const text = document.querySelector("div#time_msg")
+            const img = document.querySelector("div.large")
+
+            body.classList = []
+            body.classList.add(period_of_the_day);
+            text.innerHTML = msgs[period_of_the_day]
+            img.innerHTML = imgsrc(period_of_the_day)
+        }
     }
 
     const clockText = document.querySelector("h2#clock_text").innerText; 
@@ -92,8 +77,7 @@ function updateTimeStyle () {
 function load() {
     updateClock();
     updateTimeStyle();
+    // listen_new_time(); listen to new time, if it is changed, get it and substitute to the update clock
 }
 
-//updateSectionHeight();
-load();
 setInterval(load, 1000);
