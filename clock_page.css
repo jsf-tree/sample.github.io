@@ -21,11 +21,11 @@ body.afternoon {
 }
 body.sunset {
     color: rgb(255, 255, 255);
-    background: rgb(255, 34, 0);
+    background: radial-gradient(circle at bottom right, #ffffff 10%, #f2ff00 11%, #fe7803 20%, rgb(146, 7, 139) 45%, rgb(49, 10, 66) 60%, rgb(21, 2, 30) 95%);
 }
 body.night {
     color: rgb(255, 255, 255);
-    background: rgb(22, 0, 31);
+    background: radial-gradient(circle at top, #333, #333 50%, #eee 75%, #33333300 75%), radial-gradient(circle at bottom, #00d5ff, #333 50%, #eee 75%, #333 75%);;
 }
 section {
     background: white;
