@@ -56,8 +56,9 @@ div.small {
     height: 10%;
 }
 div.large {
-    height: 70%;
+    height: 65%;
     position: relative; /* Ensure the parent div has a position */
+    margin: 5%;
 }
 div.large img {
     height: 100%; /* Set the height of the image to be 100% of its parent */
