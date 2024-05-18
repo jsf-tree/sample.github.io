@@ -1,4 +1,4 @@
-[Click here to access it!](https://jsf-tree.github.io) or copy it to clipboard:
+[Click here to access it!](https://julianofinck.github.io) or copy it to clipboard:
 ```
-https://jsf-tree.github.io
+https://julianofinck.github.io
 ```
